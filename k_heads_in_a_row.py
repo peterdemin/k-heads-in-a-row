@@ -31,7 +31,7 @@ def random_generator():
 
 random_generator()
 
-real_tosses = map(int, ''.join('''
+real_tosses = ''.join('''
     oooppopppopppooppop
     ppooopopopppppooooo
     ooppoppooopppoopppo
@@ -40,7 +40,7 @@ real_tosses = map(int, ''.join('''
     oopooopoppoppoppoop
     ooopoppppppoopoppoo
     opppppoppoppoooppop
-    '''.split()).replace('o', '0').replace('p', '1'))
+    '''.split())
 real_lengths = sequence_lengths(real_tosses)
 for k in sorted(real_lengths.keys()):
     print '%2d - 1/%f' % (k, 1.*len(real_tosses) / real_lengths[k])
